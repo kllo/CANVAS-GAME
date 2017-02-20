@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{overflow:hidden;}
+			#canvas,#canvas2,#canvas3{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -400px;
+				margin-top: -300px;
+			}
+			
+			.gameNav{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -100px;
+				text-align: center;
+			}
+			.gameNav p:first-of-type{
+				background: red;
+				height: 50px;
+				line-height: 50px;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			.gameNav p:first-of-type:hover{
+				background: black;
+				color: #FFFFFF;
+			}
+			#gameover{
+				width: 400px;
+				height: 200px;
+				border: 2px solid;
+				box-shadow: 0px 0px 15px 0px black;
+				background: #fff;
+				position: absolute;
+				left: 50%;
+				margin-left: -200px;
+				top:50%;
+				margin-top: -100px;
+				text-align: center;
+				transition: 0.3s;
+				transform: scale(0);
+			}
+			#gameover p{
+				margin-top: 20px;
+				font-size: 20px;
+			}
+			#gameover button{
+				width: 100px;
+				height: 50px;
+				background: red;
+				border: none;
+				font-size: 20px;
+				transition: 0.3s;
+				cursor: pointer;
+			}
+			#gameover button:hover{
+				background: blue;
+				color: #FFFFFF;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas3"></canvas>
+		<canvas id="canvas"></canvas>
+		<canvas id="canvas2"></canvas>
+		
+		<div class="gameNav">
+			<p id="newgame">开始新游戏</p>
+			<p>当前分数:<span id="scorll">0</span></p>
+			<p>生命值：<span id="life"></span></p>
+			
+		</div>
+		
+		<!--游戏结束显示-->
+		<div id="gameover">
+			<p>游戏结束</p>
+			<p>最终得分：<span id="finalScorll"></span></p>
+			<button onclick="scale()">确定</button>
+		</div>
+		
+		<script src="js/script2.js"></script>
+	</body>
+</html>
