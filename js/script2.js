@@ -187,6 +187,8 @@ function gameover(){
 	gameoved.style.transform="scale(1)";
 	finallSc.innerText=numbers;
 	clearInterval(timers);
+	numbers=0;
+	ming=5;
 }
 
 function scale(){
